@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - name: install go
-      run: sudo snap install go
+      run: sudo snap install go --classic
 
     - name: Checkout master
       uses: actions/checkout@v1
