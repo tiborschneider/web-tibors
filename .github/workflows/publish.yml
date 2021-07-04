@@ -8,21 +8,27 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     steps:
-    - name: install go
-      run: sudo snap install go --classic
-
     - name: Checkout master
-      uses: actions/checkout@v1
+      uses: actions/checkout@v2
       with:
         submodules: true
+        fetch-depth: 0
 
-    - name: Hugo Deploy GitHub Pages
-      uses: benmatselby/hugo-deploy-gh-pages@master
-      env:
-        HUGO_VERSION: 0.84.0
-        TARGET_REPO: tiborschneider/tibors.ch
-        TOKEN: ${{ secrets.TOKEN }}
-        CNAME: www.tibors.ch
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: 'latest'
+        # extended: true
+
+    - name: Build
+      run: hugo --minify
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      if: github.ref == 'refs/heads/main'
+      with:
+        github_token: ${{ secrets.TOKEN }}
+        publish_dir: ./public
