@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: install go
+      run: sudo apt-get install go
+
     - name: Checkout master
       uses: actions/checkout@v1
       with:
