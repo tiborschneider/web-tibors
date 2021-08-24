@@ -56,7 +56,7 @@ url_code: 'https://github.com/nsg-ethz/snowcap'
 url_dataset: ''
 url_poster: ''
 url_project: 'https://snowcap.ethz.ch/public/index.html'
-url_slides: ''
+url_slides: 'snowcap_slides.pdf'
 url_source: ''
 url_video: ''
 
