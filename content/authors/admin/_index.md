@@ -64,6 +64,6 @@ email: "sctibor@ethz.ch"
 highlight_name: false
 ---
 
-I am a first-year PhD Student at ETH Zurich in the [Networked Systems Group](https://nsg.ee.ethz.ch/home/), advertised by Prof. Dr. Laurent Vanbever. My current research focuses on the verification and synthesis of network configurations.
+I am a second-year PhD Student at ETH Zurich in the [Networked Systems Group](https://nsg.ee.ethz.ch/home/), advertised by Prof. Dr. Laurent Vanbever. My current research focuses on the verification and synthesis of network configurations.
 
 I have received my Master's degree in Electrical Engineering and Information Technology from ETH Zurich. With my work during the Master's thesis, I explored approaches for planning and performing configuration updates in large-scale internet networks.
